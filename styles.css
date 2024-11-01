@@ -1,0 +1,58 @@
+/* 全体のリセットとレイアウト */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+
+
+header {
+  background-color: #3561ba;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.coinfield{
+	display: flex;
+	justify-content: space-around;
+}
+
+.coin{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width:50px;
+	height:50px;
+	font-size: large;
+	color:#fff;
+	background: #6fa1ff;
+	text-align: center;
+}
+
+
+
+footer {
+  background-color: #3561ba;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Removal Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>硬貨の除去パズル</h1>
+    </header>
+
+    <main>
+      <h2 id="message">ゲームスタート</h2>
+      1辺の硬貨数
+      <select id="side_num">
+        <option>3</option>
+        <option selected>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+      <button onclick="gameStart()">パズルを変更</button>
+      <canvas id="puzzle" width="380" height="380"></canvas>
+     
+    </main>
+
+    <footer>
+      <!-- <p>&copy; </p> -->
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
