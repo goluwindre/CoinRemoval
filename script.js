@@ -79,7 +79,7 @@ function flipCoin(ro, co){
 			coins[side*(ro-1)+co] = "H";
 		}
 	}
-	if(ro < side){ // 下の硬貨をひっくり返す場合
+	if(ro < side-1){ // 下の硬貨をひっくり返す場合
 		if(coins[side*(ro+1)+co] == "H"){
 			coins[side*(ro+1)+co] = "T";
 		}else if(coins[side*(ro+1)+co] == "T"){
@@ -93,7 +93,7 @@ function flipCoin(ro, co){
 			coins[side*ro+co-1] = "H";
 		}
 	}
-	if(co < side){// 右の硬貨をひっくり返す場合
+	if(co < side-1){// 右の硬貨をひっくり返す場合
 		if(coins[side*ro+co+1] == "H"){
 			coins[side*ro+co+1] = "T";
 		}else if(coins[side*ro+co+1] == "T"){
