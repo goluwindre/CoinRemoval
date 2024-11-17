@@ -24,9 +24,15 @@ function drawCoins() {
 				ctx.arc(x, y, circleRadius, 0, Math.PI * 2);
 				ctx.closePath();
 				if(coin == "H"){
-					ctx.fillStyle = '#228B22';
+					let greencoin = ctx.createLinearGradient(0, 0, 150, 150);
+					greencoin.addColorStop(0, '#004d25');
+					greencoin.addColorStop(1, '#417038');
+					ctx.fillStyle = greencoin;
 				}else if(coin == "T"){
-					ctx.fillStyle = '#ff0000';
+					let redcoin = ctx.createLinearGradient(0, 0, 150, 150);
+					redcoin.addColorStop(0, '#c70067');
+					redcoin.addColorStop(1, '#d70035');
+					ctx.fillStyle = redcoin;
 				}else{
 					ctx.fillStyle = '#fffffff';
 				}
@@ -172,7 +178,6 @@ function init(){
 
 function gameStart(){
 	message.textContent = "GAME START";
-	console.log("circleRadius", circleRadius);
 
 	select.onchange = function(){
 		side = Number(this.value);
