@@ -1,4 +1,4 @@
-/* 全体のリセットとレイアウト */
+
 html,
 body {
   height: 100%;
@@ -14,11 +14,12 @@ body {
 }
 
 header {
-  background-color: #3561ba;
+  background-color: #930b3f;
   color: white;
   text-align: center;
   padding: 1rem;
-  background-image: linear-gradient(90deg, rgba(210, 14, 255, 1), rgba(0, 119, 255, 1) 100%, rgba(65, 164, 253, 1));
+  /* background-image: linear-gradient(90deg, rgba(210, 14, 255, 1), rgba(0, 119, 255, 1) 100%, rgba(65, 164, 253, 1)); */
+  
 }
 
 main {
@@ -31,22 +32,19 @@ main {
 }
 
 #rule{
-  background-color: #3561ba;
+  background-color: #283a31;
   color:white;
   border-radius: 10px;
   width: 360px;
   margin: 50px;
   padding: 20px;
-  background-image: linear-gradient(30deg, rgba(65, 164, 253, 1), rgba(255, 255, 255, 0) 100%, rgba(14, 244, 255, 1));
+  /* background-image: linear-gradient(30deg, rgba(65, 164, 253, 1), rgba(255, 255, 255, 0) 100%, rgba(14, 244, 255, 1)); */
 }
 
-
-
-
 footer {
-  background-color: #3561ba;
+  background-color: #930b3f;
   color: white;
   text-align: center;
   padding: 1rem;
-  background-image: linear-gradient(90deg, rgba(210, 14, 255, 1), rgba(0, 119, 255, 1) 100%, rgba(65, 164, 253, 1));
+  /* background-image: linear-gradient(90deg, rgba(210, 14, 255, 1), rgba(0, 119, 255, 1) 100%, rgba(65, 164, 253, 1)); */
 }

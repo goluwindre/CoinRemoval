@@ -1,6 +1,6 @@
 const canvas = document.getElementById('puzzle');;
 const ctx = canvas.getContext('2d');
-let side = 4; // 4x4グリッド
+let side = 4; // 初期状態は4x4グリッド
 let grid = side*side;
 const padding = 0; // 円同士の余白
 let circleRadius = (canvas.width / side - padding) / 2; // 円の半径
@@ -24,14 +24,14 @@ function drawCoins() {
 				ctx.arc(x, y, circleRadius, 0, Math.PI * 2);
 				ctx.closePath();
 				if(coin == "H"){
-					let greencoin = ctx.createLinearGradient(0, 0, 150, 150);
-					greencoin.addColorStop(0, '#004d25');
-					greencoin.addColorStop(1, '#417038');
+					let greencoin = ctx.createRadialGradient(150, 150, 0, 150, 150, 300);
+					greencoin.addColorStop(0, '#014d63');
+					greencoin.addColorStop(1, '#6c7000');
 					ctx.fillStyle = greencoin;
 				}else if(coin == "T"){
-					let redcoin = ctx.createLinearGradient(0, 0, 150, 150);
-					redcoin.addColorStop(0, '#c70067');
-					redcoin.addColorStop(1, '#d70035');
+					let redcoin = ctx.createRadialGradient(150, 150, 0, 150, 150, 300);
+					redcoin.addColorStop(0, '#a20c4c');
+					redcoin.addColorStop(1, '#bf0000');
 					ctx.fillStyle = redcoin;
 				}else{
 					ctx.fillStyle = '#fffffff';
@@ -133,6 +133,7 @@ function coinsCheck(){
 	}
 }
 
+
 function gameCheck(){
 	var heads = 0;
 	var tails = 0;
@@ -179,14 +180,14 @@ function init(){
 function gameStart(){
 	message.textContent = "GAME START";
 
-	select.onchange = function(){
-		side = Number(this.value);
-		grid = side*side;
-		circleRadius = (canvas.width / side - padding) / 2;
-	}
-	
 	init();
-	console.log(coins);
+}
+
+function changePuzzle(){
+	side = select.value;
+	grid = side*side;
+	circleRadius = (canvas.width / side - padding) / 2;
+	gameStart();
 }
 
 canvas.addEventListener('click', (e) => {
@@ -198,7 +199,5 @@ canvas.addEventListener('click', (e) => {
 	gameCheck();
 	
 });
-
-
 
 gameStart();
